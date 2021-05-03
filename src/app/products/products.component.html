@@ -1,8 +1,26 @@
 <div class="main-content">
     <div class="container-fluid">
-            <h1>Products hello</h1>
 
+        
+        
 
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>descrption</th>
+                    <th>image</th>
+                    </tr>
+                    </thead>
+                    <tr *ngFor="let i of products">
+                        <td>{{i.name}} </td>
+                        <td>{{i.description}} </td>
+                        <td>{{i.image}} </td>
+                    </tr>
+                    </table>
+                   
+
+                    
 
 
          
