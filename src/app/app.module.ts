@@ -44,8 +44,8 @@ import { PaymentsComponent } from './payments/payments.component';
     HttpClientModule,
     ComponentsModule,
     RouterModule,
-    //
     MatTableModule,
+    HttpClientModule,
     //
     AppRoutingModule,
     AgmCoreModule.forRoot({
