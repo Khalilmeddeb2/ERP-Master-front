@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
+import { CategoryEntity } from 'app/models/category-entity.model';
 import { ProductEntity } from 'app/models/product-entity.model';
 import { Observable, throwError } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
@@ -15,15 +16,15 @@ const headers= new HttpHeaders()
   providedIn: 'root'
 })
 
-export class ProductServiceService  implements OnInit {
+export class CategoryService  implements OnInit {
   
 product :any []=[];
-private _productListUrl="http://localhost:9000/api/products" 
+private categoryURL="http://localhost:9000/api/categorys" 
   constructor(private http: HttpClient) { }
-  public getProduct() :Observable <any> {
+  public getCategories() :Observable <any> {
     
 
-  return this.http.get<any[]>(this._productListUrl, { 'headers': headers }).pipe(response =>
+  return this.http.get<CategoryEntity[]>(this.categoryURL, { 'headers': headers }).pipe(response =>
     response)
     }
 
@@ -36,7 +37,7 @@ private _productListUrl="http://localhost:9000/api/products"
       const headers = new HttpHeaders({ "Content-Type": "application/json" });
   
       return this.http.post<ProductEntity>(
-        `${this._productListUrl}/${categoryId}`,
+        `${this.categoryURL}/${categoryId}`,
         body,
         { headers: headers }
       );
@@ -56,27 +57,11 @@ private _productListUrl="http://localhost:9000/api/products"
     const headers = new HttpHeaders({ "Content-Type": "application/json" });
 
     return this.http.delete<any>(
-      `${this._productListUrl}/${productId}`,
+      `${this.categoryURL}/${productId}`,
     
       { headers: headers }
     );
   
     }
-
-    public updateProduct(productId?: number ,body?:ProductEntity) :Observable <ProductEntity> {
-      
-      console.log(productId)
-      if (productId === null || body === undefined) {
-        return throwError("Required parameter body was null or undefined.");
-      }
-      const headers = new HttpHeaders({ "Content-Type": "application/json" });
-  
-      return this.http.put<ProductEntity>(
-        `${this._productListUrl}/${productId}`,
-        body,
-        { headers: headers }
-      );
-    
-      }
 
 }

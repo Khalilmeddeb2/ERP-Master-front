@@ -40,17 +40,30 @@ import { CreateProviderComponent } from './create-provider/create-provider.compo
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
 
 
+import {DropdownModule} from 'primeng/dropdown';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
-    FormsModule,
+    
+   
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     ComponentsModule,
     RouterModule,
+    MatPaginatorModule,
+
+    BrowserModule,
+    BrowserAnimationsModule,
+    
+    FormsModule,
+
     MatTableModule,
     HttpClientModule,
+    DropdownModule,
+    
     //
     AppRoutingModule,
     AgmCoreModule.forRoot({

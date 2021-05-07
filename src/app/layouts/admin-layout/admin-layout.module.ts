@@ -18,6 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [
@@ -32,6 +33,9 @@ import { MatTableModule } from '@angular/material/table';
     MatSelectModule,
     MatTooltipModule,
     MatTableModule,
+
+    //
+    MatPaginatorModule,
   ],
   declarations: [
     DashboardComponent,
