@@ -14,15 +14,8 @@ export const ROUTES: RouteInfo[] = [
     { path: '/Products', title: 'Product',  icon:'local_mall', class: '' },
     { path: '/Customers', title: 'Customer',  icon:'groups', class: '' },
     { path: '/Provider', title: 'Provider',  icon:'transfer_within_a_station', class: '' },
-
     { path: '/Order-Sale', title: 'Sale-Order',  icon:'add_shopping_cart', class: '' },
     { path: '/Purchase-Order', title: 'Purchase-Order',  icon:'shopping_cart', class: '' },
-    //{ path: '/monComp', title: 'monComp',  icon:'toc', class: '' }, 
-    //{ path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
-    //{ path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    // { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
-    //{ path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
-    //{ path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
     { path: '/Payments', title: 'Payments',  icon:'payments', class: 'active-pro' },
 ];
 

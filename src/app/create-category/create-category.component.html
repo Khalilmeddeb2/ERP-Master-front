@@ -1,0 +1,18 @@
+<h3 class="col-md-8 offset-md-4">Create Provider</h3>
+<div class="col-md-8 offset-md-4" [hidden]="submitted" style="width: 400px;">
+
+  <td><button style='margin-right:16px' (click)="goToCategoryList()" class="btn btn-success">Retourner</button>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">FirstName</label>
+      <input type="text" class="form-control" id="type" [(ngModel)]="category.type" name="typr">
+    </div>
+
+    
+    
+  
+
+    <button class="btn btn-lg btn-success glyphicon glyphicon-floppy-disk" type="submit">Enregistrer</button>
+  </form>
+</div>
