@@ -18,7 +18,7 @@ const headers= new HttpHeaders()
 
 export class CategoryService  implements OnInit {
   
-product :any []=[];
+categories :any []=[];
 private categoryURL="http://localhost:9000/api/categorys" 
   constructor(private http: HttpClient) { }
   public getCategories() :Observable <any> {
@@ -28,7 +28,7 @@ private categoryURL="http://localhost:9000/api/categorys"
     response)
     }
 
-    public addProduct(body?:ProductEntity,categoryId ? : number) :Observable <ProductEntity> {
+    public addCategory(body?:CategoryEntity) :Observable <ProductEntity> {
       
       console.log(body)
       if (body === null || body === undefined) {
@@ -37,27 +37,27 @@ private categoryURL="http://localhost:9000/api/categorys"
       const headers = new HttpHeaders({ "Content-Type": "application/json" });
   
       return this.http.post<ProductEntity>(
-        `${this.categoryURL}/${categoryId}`,
+        `${this.categoryURL}`,
         body,
         { headers: headers }
       );
     
       }
-
+ 
   ngOnInit() {
    
   }
-
-  public deleteProduct(productId?: number) :Observable <ProductEntity> {
+ 
+  public deleteCategory(CategoryId?: number) :Observable <ProductEntity> {
       
-    console.log(productId)
-    if (productId === null || productId === undefined) {
+    console.log(CategoryId)
+    if (CategoryId === null || CategoryId === undefined) {
       return throwError("Required parameter body was null or undefined.");
     }
     const headers = new HttpHeaders({ "Content-Type": "application/json" });
-
+ 
     return this.http.delete<any>(
-      `${this.categoryURL}/${productId}`,
+      `${this.categoryURL}/${CategoryId}`,
     
       { headers: headers }
     );
