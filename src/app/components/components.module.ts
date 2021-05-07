@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    MatPaginatorModule,
   ],
   declarations: [
     FooterComponent,
