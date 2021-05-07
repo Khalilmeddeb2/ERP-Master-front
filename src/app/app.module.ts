@@ -36,16 +36,29 @@ import { OrderSaleComponent } from './order-sale/order-sale.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { PaymentsComponent } from './payments/payments.component';
 
+import {DropdownModule} from 'primeng/dropdown';
+import { BrowserModule } from '@angular/platform-browser';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
-    FormsModule,
+    
+   
     ReactiveFormsModule,
     HttpClientModule,
     ComponentsModule,
     RouterModule,
+    MatPaginatorModule,
+
+    BrowserModule,
+    BrowserAnimationsModule,
+    
+    FormsModule,
+
     MatTableModule,
     HttpClientModule,
+    DropdownModule,
+    
     //
     AppRoutingModule,
     AgmCoreModule.forRoot({
