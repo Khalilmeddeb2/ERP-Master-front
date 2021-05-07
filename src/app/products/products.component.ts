@@ -104,7 +104,7 @@ this.products=e
   {
     if(element !== null)
     {
-      
+      console.log(element)
       this.showForm=true
       this.isUpdate=true;
       this.itemToUpdate=element.id
