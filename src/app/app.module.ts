@@ -35,6 +35,10 @@ import { ProviderComponent } from './provider/provider.component';
 import { OrderSaleComponent } from './order-sale/order-sale.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { PaymentsComponent } from './payments/payments.component';
+import { ProviderService } from './service/provider.service';
+import { CreateProviderComponent } from './create-provider/create-provider.component';
+import { UpdateProviderComponent } from './update-provider/update-provider.component';
+
 
 @NgModule({
   imports: [
@@ -42,6 +46,7 @@ import { PaymentsComponent } from './payments/payments.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
     ComponentsModule,
     RouterModule,
     MatTableModule,
@@ -65,10 +70,13 @@ import { PaymentsComponent } from './payments/payments.component';
     OrderSaleComponent,
     PurchaseOrderComponent,
     PaymentsComponent,
+    CreateProviderComponent,
+    UpdateProviderComponent,
+  
     
 
   ],
-  providers: [],
+  providers: [ProviderService],
   bootstrap: [AppComponent],
   
 })
