@@ -36,6 +36,7 @@ import { OrderSaleComponent } from './order-sale/order-sale.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 @NgModule({
   imports: [
@@ -67,6 +68,7 @@ import { CreateCustomerComponent } from './create-customer/create-customer.compo
     PurchaseOrderComponent,
     PaymentsComponent,
     CreateCustomerComponent,
+    UpdateCustomerComponent,
     
 
   ],
