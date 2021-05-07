@@ -5,9 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 const routes: Routes =[
   {path:'create-customer',component:CreateCustomerComponent},
+  {path:'update-customer/:id',component:UpdateCustomerComponent},
   {
     path: '',
     redirectTo: 'dashboard',
