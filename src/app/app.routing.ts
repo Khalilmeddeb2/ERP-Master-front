@@ -5,9 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CreateProviderComponent } from './create-provider/create-provider.component';
-import { UpdateProviderComponent } from './update-provider/update-provider.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { UpdateProviderComponent } from './update-provider/update-provider.component';
 
 const routes: Routes =[
   {path:'create-customer',component:CreateCustomerComponent},
