@@ -1,8 +1,32 @@
 <div class="main-content">
-    <div class="container-fluid">
-            <h1>hello Customer</h1>
+    <div class="panel-heading">
 
+        
+        
 
+            <table id="tableCustomer" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>PhoneNumber</th>
+                    <th>Address</th>
+                    <th>Type</th>
+                    </tr>
+                    </thead>
+                    <tr *ngFor="let i of customers">
+                        <td>{{i.firstName}} </td>
+                        <td>{{i.lastName}} </td>
+                        <td>{{i.email}} </td>
+                        <td>{{i.phoneNumber}}</td>
+                        <td>{{i.address}}</td>
+                        <td>{{i.type}}</td>
+                    </tr>
+                    </table>
+                   
+
+                    
 
 
          

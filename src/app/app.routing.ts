@@ -7,16 +7,17 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { CreateProviderComponent } from './create-provider/create-provider.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
 
 const routes: Routes =[
+  {path:'create-customer',component:CreateCustomerComponent},
   {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, {
-    path: '',
-    component: AdminLayoutComponent,
-    children: [{
+  }, 
+  {
+    path: '',component: AdminLayoutComponent,children: [{
       path: '',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]

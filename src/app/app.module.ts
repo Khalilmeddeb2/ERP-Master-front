@@ -35,12 +35,13 @@ import { ProviderComponent } from './provider/provider.component';
 import { OrderSaleComponent } from './order-sale/order-sale.component';
 import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 import { PaymentsComponent } from './payments/payments.component';
-import { ProviderService } from './service/provider.service';
-import { CreateProviderComponent } from './create-provider/create-provider.component';
-import { UpdateProviderComponent } from './update-provider/update-provider.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { CreateCategoryComponent } from './create-category/create-category.component';
+import { ProviderService } from './service/provider.service';
+import { CreateProviderComponent } from './create-provider/create-provider.component';
+import { UpdateProviderComponent } from './update-provider/update-provider.component';
 
 @NgModule({
   imports: [
