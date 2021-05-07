@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CreateProviderComponent } from './create-provider/create-provider.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
+import { CreateCategoryComponent } from './create-category/create-category.component';
 
 const routes: Routes =[
   {
@@ -21,7 +22,8 @@ const routes: Routes =[
     }]
   },
   {path: 'create-provider', component: CreateProviderComponent},
-  {path: 'update-provider/:id', component: UpdateProviderComponent}
+  {path: 'update-provider/:id', component: UpdateProviderComponent},
+  {path: 'create-category', component: CreateCategoryComponent}
 ];
 
 @NgModule({
