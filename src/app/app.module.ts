@@ -39,9 +39,14 @@ import { PaymentsComponent } from './payments/payments.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { CreateCategoryComponent } from './create-category/create-category.component';
-import { ProviderService } from './service/provider.service';
+
 import { CreateProviderComponent } from './create-provider/create-provider.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
+import { ProviderService } from './service/provider.service';
+import { CustomerServicesService } from './services/customer-services.service';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+
 
 @NgModule({
   imports: [
@@ -84,11 +89,13 @@ import { UpdateProviderComponent } from './update-provider/update-provider.compo
     CreateProviderComponent,
     UpdateProviderComponent,
     CreateCategoryComponent,
+    CreateCustomerComponent,
+    UpdateCustomerComponent
   
     
 
   ],
-  providers: [ProviderService],
+  providers: [ProviderService,CustomerServicesService],
   bootstrap: [AppComponent],
   
 })
