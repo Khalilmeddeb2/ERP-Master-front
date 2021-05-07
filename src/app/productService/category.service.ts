@@ -28,7 +28,7 @@ private categoryURL="http://localhost:9000/api/categorys"
     response)
     }
 
-    public addCategory(body?:CategoryEntity) :Observable <ProductEntity> {
+    public addProduct(body?:ProductEntity,categoryId ? : number) :Observable <ProductEntity> {
       
       console.log(body)
       if (body === null || body === undefined) {
@@ -37,7 +37,7 @@ private categoryURL="http://localhost:9000/api/categorys"
       const headers = new HttpHeaders({ "Content-Type": "application/json" });
   
       return this.http.post<ProductEntity>(
-        `${this.categoryURL}`,
+        `${this.categoryURL}/${categoryId}`,
         body,
         { headers: headers }
       );
@@ -48,16 +48,16 @@ private categoryURL="http://localhost:9000/api/categorys"
    
   }
 
-  public deleteCategory(CategoryId?: number) :Observable <ProductEntity> {
+  public deleteProduct(productId?: number) :Observable <ProductEntity> {
       
-    console.log(CategoryId)
-    if (CategoryId === null || CategoryId === undefined) {
+    console.log(productId)
+    if (productId === null || productId === undefined) {
       return throwError("Required parameter body was null or undefined.");
     }
     const headers = new HttpHeaders({ "Content-Type": "application/json" });
 
     return this.http.delete<any>(
-      `${this.categoryURL}/${CategoryId}`,
+      `${this.categoryURL}/${productId}`,
     
       { headers: headers }
     );
