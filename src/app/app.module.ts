@@ -38,11 +38,9 @@ import { PaymentsComponent } from './payments/payments.component';
 import { ProviderService } from './service/provider.service';
 import { CreateProviderComponent } from './create-provider/create-provider.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
-
-
-import {DropdownModule} from 'primeng/dropdown';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { CreateCategoryComponent } from './create-category/create-category.component';
 
 @NgModule({
   imports: [
@@ -62,7 +60,6 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
     MatTableModule,
     HttpClientModule,
-    DropdownModule,
     
     //
     AppRoutingModule,
@@ -85,6 +82,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     PaymentsComponent,
     CreateProviderComponent,
     UpdateProviderComponent,
+    CreateCategoryComponent,
   
     
 
