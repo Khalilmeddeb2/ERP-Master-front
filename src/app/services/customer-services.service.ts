@@ -17,22 +17,32 @@ export class CustomerServicesService implements OnInit {
 
   cutomers :any []=[];
   private _customerListUrl="http://localhost:9000/api/customers"
-  //private _newCustomerURL="http://localhost:9000/api/customers"
 
   constructor(private http : HttpClient) { }
   
   
-  public getCustomers() : Observable<any>{
-    debugger ;
-    return this.http.get<CustomerEntity[]> (this._customerListUrl,
-       { 'headers': headers }).pipe(response =>response)}
+   getCustomers() : Observable<any>{
+    return this.http.get<CustomerEntity[]>(`${this._customerListUrl}`);
+   }
     
-    
-    createCustomer(customer : CustomerEntity):Observable<Object> {
+  createCustomer(customer : CustomerEntity):Observable<Object> {
       return this.http.post(`${this._customerListUrl}`,customer);
     }
+  getCustomerById(id: number): Observable<CustomerEntity>
+      {
+       return this.http.get<CustomerEntity>(`${this._customerListUrl}/${id}`);
+      }
+  updateCustomer(id: number,customer: CustomerEntity): Observable<Object>
+        {
+          return this.http.put(`${this._customerListUrl}/${id}`,customer);
+        }
 
-    ngOnInit(): void {
+  deleteCustomer(id : number):Observable<Object>
+  {
+    return this.http.delete(`${this._customerListUrl}/${id}`);
+
+  }
+  ngOnInit(): void {
       throw new Error('Method not implemented.');
     }
 
