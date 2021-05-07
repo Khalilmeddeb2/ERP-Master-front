@@ -57,7 +57,7 @@
 
                 <div  class="btn-group-sm align-content-sm-center">
                 
-                  <button class="btn btn-warning " data-toggle="tooltip" data-placement="top" title="Edit" (click)="addEntry(element)"><i class="fa fa-edit" ></i></button>
+                  <button class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit" (click)="addEntry(element)"><i class="fa fa-edit" ></i></button>
                   <button class="btn btn-danger " data-toggle="tooltip" data-placement="top" title="Delete" (click)="deleteProduct(element)"><i class="fa fa-trash" style="color:#ffffff"></i></button>
               </div>
 
@@ -192,15 +192,15 @@
                         
                         <div>
                             
-                          <button *ngIf="isUpdate" class="btn btn-success" type="submit" style="float: right" (click)="saveProduct()">Save</button>
-                          <button *ngIf="!isUpdate" class="btn btn-success" type="submit" style="float: right" (click)="saveProduct()">Save</button>
+                          <button *ngIf="isUpdate" class="btn btn-info" type="submit" style="float: right" (click)="saveProduct()">Save</button>
+                          <button *ngIf="!isUpdate" class="btn btn-info" type="submit" style="float: right" (click)="saveProduct()">Save</button>
                         </div>
 
 
 
                           
                         <div>
-                            <button class="btn btn-success"  style="float: right" (click)="go()">Back</button>
+                            <button class="btn btn-dark"  style="float: right" (click)="go()">Back</button>
                         </div>
                         </form>
                    
