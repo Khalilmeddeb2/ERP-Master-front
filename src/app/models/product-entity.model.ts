@@ -1,4 +1,4 @@
-import { CategoryEntity } from "./category-entity.model";
+
 
 export class ProductEntity {
 
@@ -8,5 +8,5 @@ export class ProductEntity {
 	priceAchat : number;
 	quantite :number;
       image : string;
-      category :CategoryEntity ;
+      category : string;
 }
