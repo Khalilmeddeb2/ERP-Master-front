@@ -38,7 +38,7 @@ import { PaymentsComponent } from './payments/payments.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { CreateCategoryComponent } from './create-category/create-category.component';
+
 
 import { CreateProviderComponent } from './create-provider/create-provider.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
@@ -88,7 +88,7 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
     PaymentsComponent,
     CreateProviderComponent,
     UpdateProviderComponent,
-    CreateCategoryComponent,
+   
     CreateCustomerComponent,
     UpdateCustomerComponent
   
