@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class OrderSaleComponent implements OnInit {
 
   orderSales : OrderSaleEntity [] ;
-  displayedColumns: string[] = ['date', 'totalPrice','customer','invoice','actions'];
+  displayedColumns: string[] = ['number','date', 'totalPrice','customer','invoice','actions'];
   
 
  
