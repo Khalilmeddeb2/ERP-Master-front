@@ -17,6 +17,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/Order-Sale', title: 'Sale-Order',  icon:'add_shopping_cart', class: '' },
     { path: '/Purchase-Order', title: 'Purchase-Order',  icon:'shopping_cart', class: '' },
     { path: '/Payments', title: 'Payments',  icon:'payments', class: 'active-pro' },
+    { path: '/addOrEditOrderSale', title: 'Add Order Sale',  icon:'', class: '' },
 ];
 
 @Component({
