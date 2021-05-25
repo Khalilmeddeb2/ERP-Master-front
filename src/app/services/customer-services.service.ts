@@ -28,10 +28,17 @@ export class CustomerServicesService implements OnInit {
   createCustomer(customer : CustomerEntity):Observable<Object> {
       return this.http.post(`${this._customerListUrl}`,customer);
     }
-  getCustomerById(id: number): Observable<CustomerEntity>
+    //
+    getCustomerByUserName(userName: string): Observable<CustomerEntity>
+      {
+       return this.http.get<CustomerEntity>(`${this._customerListUrl}/${userName}`);
+      }
+      //
+      getCustomerById(id: number): Observable<CustomerEntity>
       {
        return this.http.get<CustomerEntity>(`${this._customerListUrl}/${id}`);
       }
+      //
   updateCustomer(id: number,customer: CustomerEntity): Observable<Object>
         {
           return this.http.put(`${this._customerListUrl}/${id}`,customer);
