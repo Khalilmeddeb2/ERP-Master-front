@@ -9,6 +9,7 @@ import { CreateProviderComponent } from './create-provider/create-provider.compo
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
 import { UpdateProviderComponent } from './update-provider/update-provider.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { AddOrEditOrderSaleComponent } from './add-or-edit-order-sale/add-or-edit-order-sale.component';
 
 const routes: Routes =[
   {path:'create-customer',component:CreateCustomerComponent},
@@ -25,7 +26,11 @@ const routes: Routes =[
     }]
   },
   {path: 'create-provider', component: CreateProviderComponent},
-  {path: 'update-provider/:id', component: UpdateProviderComponent}
+  {path: 'update-provider/:id', component: UpdateProviderComponent},
+
+  //
+ 
+  {path: 'addOrEditOrderSale', component: AddOrEditOrderSaleComponent},
  
 ];
 
