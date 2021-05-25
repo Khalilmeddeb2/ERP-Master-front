@@ -46,6 +46,7 @@ import { ProviderService } from './service/provider.service';
 import { CustomerServicesService } from './services/customer-services.service';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { AddOrEditOrderSaleComponent } from './add-or-edit-order-sale/add-or-edit-order-sale.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 
     MatTableModule,
     HttpClientModule,
+   
     
     //
     AppRoutingModule,
@@ -90,7 +92,8 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
     UpdateProviderComponent,
    
     CreateCustomerComponent,
-    UpdateCustomerComponent
+    UpdateCustomerComponent,
+    AddOrEditOrderSaleComponent
   
     
 
