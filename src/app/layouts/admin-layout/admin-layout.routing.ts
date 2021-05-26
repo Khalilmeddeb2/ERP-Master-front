@@ -72,7 +72,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'monComp',        component: MonCompComponent },
     { path: 'Invoice',        component: InvoiceComponent },
-    { path: 'Category',        component: CategoryComponent },
+    { path: 'Stock',        component: CategoryComponent },
     { path: 'Products',        component: ProductsComponent },
     { path: 'Customers',        component: CustomersComponent },
     { path: 'Provider',        component: ProviderComponent },
