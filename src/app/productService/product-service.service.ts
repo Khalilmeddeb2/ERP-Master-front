@@ -27,7 +27,7 @@ private _productListUrl="http://localhost:9000/api/products"
     response)
     }
 
-    public addProduct(body?:ProductEntity,categoryId ? : number) :Observable <ProductEntity> {
+    public addProduct(body?:ProductEntity) :Observable <ProductEntity> {
       
       console.log(body)
       if (body === null || body === undefined) {
@@ -36,7 +36,7 @@ private _productListUrl="http://localhost:9000/api/products"
       const headers = new HttpHeaders({ "Content-Type": "application/json" });
   
       return this.http.post<ProductEntity>(
-        `${this._productListUrl}/${categoryId}`,
+        `${this._productListUrl}`,
         body,
         { headers: headers }
       );

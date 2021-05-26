@@ -5,3 +5,4 @@ describe('CustomerEntity', () => {
     expect(new CustomerEntity()).toBeTruthy();
   });
 });
+  
