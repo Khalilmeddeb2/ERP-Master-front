@@ -10,7 +10,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { MonCompComponent } from 'app/mon-comp/mon-comp.component';
 import { InvoiceComponent } from 'app/invoice/invoice.component';
-import { CategoryComponent } from 'app/stock/category.component';
+import { CategoryComponent } from 'app/category/category.component';
 import { ProductsComponent } from 'app/products/products.component';
 import { CustomersComponent } from 'app/customers/customers.component';
 import { ProviderComponent } from 'app/provider/provider.component';
