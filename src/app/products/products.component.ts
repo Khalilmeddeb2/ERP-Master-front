@@ -1,9 +1,9 @@
 //import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CategoryEntity } from 'app/models/category-entity.model';
+//import { CategoryEntity } from 'app/models/category-entity.model';
 import { ProductEntity } from 'app/models/product-entity.model';
-import { CategoryService } from 'app/productService/category.service';
+//import { CategoryService } from 'app/productService/category.service';
 import { ProductServiceService } from 'app/productService/product-service.service';
 import { Location } from '@angular/common';
 
@@ -15,7 +15,7 @@ import { element } from 'protractor';
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
-  providers: [ProductServiceService,CategoryService]
+  providers: [ProductServiceService]
 })
 
 
@@ -38,20 +38,20 @@ export class ProductsComponent implements OnInit {
   // affichage 
   displayedColumns: string[] = ['name', 'description' ,'priceVente','priceAchat','quantite',"category","actions"];
   showForm: boolean;
-  categories: CategoryEntity[];
+  //categories: CategoryEntity[];
   //selectedCategory: CategoryEntity;
   isUpdate: boolean; 
   itemToUpdate: number;
 
-  constructor(private productServiceService : ProductServiceService ,private categoryService :CategoryService) {}
-  products :ProductEntity [] ;
+  constructor(private productServiceService : ProductServiceService) {}
+  products :ProductEntity [] ; 
   ngOnInit(): void { // methode va declancher lors l'ecution du composant
   this.showForm = false
     
    
-  this.categoryService.getCategories().subscribe(e=>{
+ /* this.categoryService.getCategories().subscribe(e=>{
     this.categories=e
-  })
+  })*/
 
 
 
@@ -78,6 +78,7 @@ this.products=e
     productForSave.priceVente = this.productForm.controls["priceVente"].value
     productForSave.priceAchat = this.productForm.controls["priceAchat"].value
     productForSave.quantite = this.productForm.controls["quantite"].value
+    productForSave.category = this.productForm.controls["category"].value
     //console.log(this.productForm.controls["category"].value)
     if(this.isUpdate)
     {
@@ -88,7 +89,7 @@ this.products=e
         })
     }
     else{
-    this.productServiceService.addProduct(productForSave,this.productForm.controls["category"].value).subscribe(e=>{
+    this.productServiceService.addProduct(productForSave).subscribe(e=>{
       
 
       this.ngOnInit()
@@ -104,7 +105,7 @@ this.products=e
   {
     if(element !== null)
     {
-      
+      console.log(element)
       this.showForm=true
       this.isUpdate=true;
       this.itemToUpdate=element.id
@@ -117,6 +118,7 @@ this.products=e
       this.productForm.controls["priceVente"].setValue(element.priceVente)
       this.productForm.controls["priceAchat"].setValue(element.priceAchat)
       this.productForm.controls["quantite"].setValue(element.quantite)
+      this.productForm.controls["category"].setValue(element.category)
     }
     else
     {

@@ -14,6 +14,7 @@ export class ProviderComponent implements OnInit {
 
 
   provideers: ProviderModel[];
+  
 
   constructor(private providerService: ProviderService, private router: Router) { }
 

@@ -1,8 +1,91 @@
 <div class="main-content">
     <div class="container-fluid">
-            <h1>hello sale-order</h1>
+        <section class="content">
+            <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">List Of SalesOrders</h3>
+
+                  <button  class="btn btn-success btn-sm " data-toggle="tooltip" data-placement="top"  style="float: right;" ><a style="color:#ffffff" routerLink="/addOrEditOrderSale" routerLinkActive= "active"><i class="fa fa-plus-circle"></i> Add new SaleOrder</a></button>
+
+                   
+       
+
+        
+        <br>
+        <br>
+        <br>
+        
+        <table mat-table [dataSource]="orderSales" class="table table-hover" >
+       
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+
+            <ng-container matColumnDef="number">
+              <th mat-header-cell *matHeaderCellDef> Number </th>
+              <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef> Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="totalPrice">
+                <th mat-header-cell *matHeaderCellDef> Total Price </th>
+                <td mat-cell *matCellDef="let element"> {{element.totalPrice}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="customer">
+                <th mat-header-cell *matHeaderCellDef> Customer </th>
+                <td mat-cell *matCellDef="let element"> {{element.customer.username}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="invoice">
+                <th mat-header-cell *matHeaderCellDef> InvoiceNumber </th>
+                <td mat-cell *matCellDef="let element"> {{element.invoice.number}} </td>
+              </ng-container>
+
+              
+              <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let element"> 
+
+                  <div  class="btn-group-sm align-content-sm-center">
+                
+                   <button class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" ></i></button>
+                    <button class="btn btn-danger " data-toggle="tooltip" data-placement="top" title="Delete" (click)="deleteOrderSale(element.number)"><i class="fa fa-trash" style="color:#ffffff"></i></button>
+                </div>
+              </ng-container>
+          
+              
+
+          
+
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+         
+         
+          
+          
+
+            
+
+                    
 
 
+
+                          
+                      
+                    
+</div>
+</div>
+</section>
 
 
          
