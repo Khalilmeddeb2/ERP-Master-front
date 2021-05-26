@@ -31,12 +31,12 @@ export class CustomerServicesService implements OnInit {
     //
     getCustomerByUserName(userName: string): Observable<CustomerEntity>
       {
-       return this.http.get<CustomerEntity>(`${this._customerListUrl}/${userName}`);
+       return this.http.get<CustomerEntity>(`${this._customerListUrl}/user/${userName}`);
       }
       //
       getCustomerById(id: number): Observable<CustomerEntity>
       {
-       return this.http.get<CustomerEntity>(`${this._customerListUrl}/${id}`);
+       return this.http.get<CustomerEntity>(`${this._customerListUrl}/id/${id}`);
       }
       //
   updateCustomer(id: number,customer: CustomerEntity): Observable<Object>
