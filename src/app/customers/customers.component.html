@@ -1,36 +1,39 @@
 <div class="main-content">
     <div class="container-fluid">
-
+        <div class="card">
+            <div class="card-header">
 
 <div class="panel panel-primary">
     <div class="panel-heading">
         
         <h2>List of Customers</h2>
-
-
-        <button routerLink="/create-customer" class="btn btn-success" routerLinkActive="active" title="Add New customer">
-            Add new customer 
-        </button>
+        <button  class="btn btn-success btn-sm " routerLink="/create-customer" data-toggle="tooltip" data-placement="top"
+         style="float: right;" *ngIf= "!showForm" routerLinkActive="active" title="Add New customer">
+         <i class="fa fa-plus-circle"></i> Add new Customer</button>
+        <br>
+        <br>
+        <br>
 
 
         <div class="panel-body">
             <table id="tableCustomer" class="table table-striped"  cellspacing="0" width="100%">
-                <thead>
                 <tr>
                     <th>FirstName</th>
                     <th>LastName</th>
+                    <th>UserName</th>
                     <th>Email</th>
                     <th>PhoneNumber</th>
                     <th>Address</th>
                     <th>Type</th>
                     <th>Actions</th>
-                    </tr>
-                    </thead>
+                </tr>
+                   
                     <tr *ngFor="let i of customers">
-                        <td>{{i.firstName}} </td>
-                        <td>{{i.lastName}} </td>
+                        <td>{{i.firstname}} </td>
+                        <td>{{i.lastname}} </td>
+                        <td>{{i.username}}</td>
                         <td>{{i.email}} </td>
-                        <td>{{i.phoneNumber}}</td>
+                        <td>{{i.phonenumber}}</td>
                         <td>{{i.address}}</td>
                         <td>{{i.type}}</td>
                         <td>
@@ -55,5 +58,7 @@
     </div>
 </div>
 
+</div>
+</div>
 </div>
 </div>

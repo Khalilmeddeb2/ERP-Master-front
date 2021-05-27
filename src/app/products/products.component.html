@@ -8,7 +8,9 @@
                     <h3 *ngIf= "isUpdate && showForm" class="card-title">Update Product</h3>
        
 
-        <button  class="btn btn-success btn-sm " data-toggle="tooltip" data-placement="top" title="Add New Training" style="float: right;"  *ngIf= "!showForm" (click)="addEntry(null)"><i class="fa fa-plus-circle"></i> Add new Product</button>
+        <button  class="btn btn-success btn-sm " data-toggle="tooltip" data-placement="top" title="Add New Product"
+         style="float: right;" *ngIf= "!showForm" (click)="addEntry(null)">
+         <i class="fa fa-plus-circle"></i> Add new Product</button>
         <br>
         <br>
         <br>

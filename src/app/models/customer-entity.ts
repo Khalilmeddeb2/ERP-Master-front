@@ -1,10 +1,10 @@
 export class CustomerEntity {
     id:number;
-    firstName : string ;
-    lastName : string ;
+    firstname : string ;
+    lastname : string ;
     email : string ;
-    userName : string ;
-    phoneNumber : number ;
+    username : string ;
+    phonenumber : number ;
     address : string ;
     type : string;
 

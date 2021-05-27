@@ -57,7 +57,7 @@ export class ProductsComponent implements OnInit {
 
 
     this.productServiceService.getProduct().subscribe(e=>{
-this.products=e
+     this.products=e
 
 
 
