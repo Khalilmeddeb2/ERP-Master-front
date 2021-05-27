@@ -18,6 +18,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/Purchase-Order', title: 'Purchase-Order',  icon:'shopping_cart', class: '' },
     { path: '/Payments', title: 'Payments',  icon:'payments', class: 'active-pro' },
     { path: '/addOrEditOrderSale', title: 'Add Order Sale',  icon:'', class: '' },
+    { path: '/createPurchaseOrder', title: 'Add Purchase Order',  icon:'', class: ''},
+    { path: '/create-provider', title: 'Add Provider',  icon:'', class: '' },
+    { path: '/update-provider/:id', title: 'Update Provider',  icon:'', class: ''},
 ];
 
 @Component({

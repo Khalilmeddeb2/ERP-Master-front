@@ -26,6 +26,7 @@
         
                 <thead>
                   <tr>
+                    <th >UserName</th>
                     <th >FirstName</th>
                     <th >LastName</th>
                     <th >Email</th>
@@ -38,6 +39,7 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let provider of provideers">
+                    <td>{{provider.userName}}</td>
                     <td>{{provider.firstName}}</td>
                     <td>{{provider.lastName}}</td>
                     <td>{{provider.email}}</td>
