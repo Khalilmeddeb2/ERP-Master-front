@@ -8,11 +8,11 @@
             <div class="form-group col-md-6 offset-md-3">
               <label>Username :</label>
 
-<input #in type="text" class="form-control" (keyup)="searchPerson(in.value)" placeholder="search client by username" >
-<button type="button" class="btn btn-success">
+<input #in type="text" class="form-control"  (keyup)="searchPerson(in.value)" placeholder="search client by username" >
+
   <i class="fa fa-search"></i>
  
-</button>
+
 <ol>
     
   {{filtredCustomer.username}}      
@@ -34,8 +34,8 @@
   
       <div>
      
-        <button  class="btn btn-info" type="submit" style="float: right" (click)="onSubmit()" >Save</button>
-        <button class="btn btn-dark"  style="float: right" (click)="go()">Back</button>
+        <button  class="btn btn-info" type="submit" style="float: right" (click)="onSubmit()" ><a style="color:#ffffff" routerLink="/Order-Sale" routerLinkActive= "active">Save</a></button>
+        <button class="btn btn-dark"  style="float: right" (click)="goToList()">Back</button>
       
     </div>
     

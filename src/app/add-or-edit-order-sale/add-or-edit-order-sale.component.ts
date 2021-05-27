@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OrderSaleEntity } from 'app/models/order-sale-entity';
 import { CustomerServicesService } from 'app/services/customer-services.service';
 import { OrderSaleServiceService } from 'app/services/order-sale-service.service';
@@ -14,7 +15,7 @@ export class AddOrEditOrderSaleComponent implements OnInit {
   orderSale: OrderSaleEntity;
   invoiceNumber:number;
   
-  constructor(private customerServicesService : CustomerServicesService,private ordersaleService : OrderSaleServiceService) { }
+  constructor(private customerServicesService : CustomerServicesService,private ordersaleService : OrderSaleServiceService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -43,6 +44,7 @@ export class AddOrEditOrderSaleComponent implements OnInit {
     this.ordersaleService.addOrderSalesList(this.orderSale, this.filtredCustomer.id).subscribe( data =>{
       console.log("aqwxcv")
       console.log(data);
+      this.goToList();
      
     },
     error => console.log(error)); 
@@ -50,10 +52,10 @@ export class AddOrEditOrderSaleComponent implements OnInit {
   }
   
 
-  /*goToProviderList()
+  goToList()
   {
-    this.router.navigate(['/Provider'])
-  }*/
+    this.router.navigate(['/Order-Sale'])
+  }
 
 
   onSubmit(){
