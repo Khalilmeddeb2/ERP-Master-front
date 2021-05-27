@@ -1,4 +1,21 @@
+
+<div class="sidebar" data-color="azure" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+  <app-sidebar></app-sidebar>
+  <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-3.jpg)"></div>
+</div>
+<div class="main-panel">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+  <div *ngIf="isMaps('maps')">
+      <app-footer></app-footer>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
 <h3 class="col-md-8 offset-md-4">Create Provider</h3>
+
 <div class="col-md-8 offset-md-4" [hidden]="submitted" style="width: 400px;">
 
   <td><button style='margin-right:16px' (click)="goToProviderList()" class="btn btn-success">Retourner</button>
