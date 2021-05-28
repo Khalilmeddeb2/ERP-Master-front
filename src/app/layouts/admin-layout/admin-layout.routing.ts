@@ -18,6 +18,9 @@ import { OrderSaleComponent } from 'app/order-sale/order-sale.component';
 import { PurchaseOrderComponent } from 'app/purchase-order/purchase-order.component';
 import { PaymentsComponent } from 'app/payments/payments.component';
 import { AddOrEditOrderSaleComponent } from 'app/add-or-edit-order-sale/add-or-edit-order-sale.component';
+import { CreateCustomerComponent } from 'app/create-customer/create-customer.component';
+import { UpdateCustomerComponent } from 'app/update-customer/update-customer.component';
+import { CreateProviderComponent } from 'app/create-provider/create-provider.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -79,7 +82,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'Order-Sale',        component: OrderSaleComponent },
     { path: 'Purchase-Order',        component: PurchaseOrderComponent },
     { path: 'Payments',        component: PaymentsComponent },
-    { path: 'addOrEditOrderSale',        component: AddOrEditOrderSaleComponent },
+    { path: 'addOrEditOrderSale', component: AddOrEditOrderSaleComponent },
+    { path: 'create-provider', component: CreateProviderComponent},
+    { path: 'create-customer', component: CreateCustomerComponent},
+
 
 
     

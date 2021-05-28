@@ -1,10 +1,16 @@
-<app-sidebar></app-sidebar>
-<div class="main-content">
-<div class="container-fluid">
-<div class="card">
+<div class="sidebar" data-color="azure" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+    <app-sidebar></app-sidebar>
+    <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-3.jpg)">
+</div>
+  </div>  
+  <div class="container-fluid" style="width: 800px;">
+  <div class="card">
     <div class="card-header">
-        <div class="col-md-8 offset-md-3">
-            <h1 class="card-title">Add new Customer</h1>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+  <h3 class="col-md-8 offset-md-4">Add New Customer</h3>
+
+             <div class="col-md-8 offset-md-4" [hidden]="submitted" style="width: 400px;">           
             <br>
             <form (ngSubmit) = "onSubmit()">
                 <div class="form-group">
@@ -42,10 +48,11 @@
                 <input type="text" class="form-control" id="type"
                 [(ngModel)]="customer.type" name="type">
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="submit" class="btn btn-success">Send</button>
             </form>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>

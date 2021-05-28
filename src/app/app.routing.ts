@@ -27,9 +27,6 @@ const routes: Routes =[
   },
   {path: 'create-provider', component: CreateProviderComponent},
   {path: 'update-provider/:id', component: UpdateProviderComponent},
-
-  //
- 
   {path: 'addOrEditOrderSale', component: AddOrEditOrderSaleComponent},
  
 ];

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InvoiceEntity } from 'app/models/invoice-entity';
+import { InvoiceServiceService } from 'app/services/invoice-service.service';
 
 @Component({
   selector: 'app-invoice',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./invoice.component.css']
 })
 export class InvoiceComponent implements OnInit {
+  invoices : InvoiceEntity[];
 
-  constructor() { }
+  displayedColumns: string[] = ['number',"date",'toPayments'];
+
+  constructor(private invoiceService: InvoiceServiceService) { }
 
   ngOnInit(): void {
+    this.getInvoicesList();
+  }
+  private getInvoicesList(){
+    this.invoiceService.getInvoicesList().subscribe(data=>{
+      this.invoices=data;
+      console.log(data);
+    })
+
   }
 
 }

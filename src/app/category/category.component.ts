@@ -24,12 +24,6 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     this.productServiceService.getProduct().subscribe(e=>{
       this.products=e
-      
-      
-      
-      
-      
-      
           })
           
       

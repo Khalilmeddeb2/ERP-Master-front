@@ -1,22 +1,48 @@
 <div class="main-content">
     <div class="container-fluid">
-        <div class="card"></div>
+        <div class="card">
             <div class="card-header">
-                <h3 class="card-title" >List of Invoices </h3>
-                <br>
-                <br>
-                <br>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        
+        <h2>List of Invoices </h2>
+        
+        <br>
+        <br>
+        <br>
 
 
+        <div class="panel-body">
+            <table id="tableInvoices" class="table table-striped"  cellspacing="0" width="100%">
+                <tr>
+                    <th>Number</th>
+                    <th>Date</th>
+                    <th>Total Payement</th>
+                    <th>Actions</th>
+                </tr>
+                   
+                    <tr *ngFor="let i of invoices">
+                        <td>{{i.number}} </td>
+                        <td>{{i.date}} </td>
+                        <td>{{i.totPayments}}</td>
+                        <td>
 
-                
+                        </td>
+                    </tr>
+                    </table>
+                    </div>
+                   
+
+                    
 
 
-
-
-
-
-            </div>    
-        </div> 
+         
+      
     </div>
+</div>
+
+</div>
+</div>
+</div>
 </div>
