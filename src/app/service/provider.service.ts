@@ -27,7 +27,15 @@ export class ProviderService {
   {
 
     console.log("a2");
-    return this.httpClient.get<ProviderModel>(`${this.baseURL}/${id}`);
+    return this.httpClient.get<ProviderModel>(`${this.baseURL}/id/${id}`);
+  }
+
+
+  getProviderByUserName(userName: string): Observable<ProviderModel>
+  {
+
+    console.log("a2");
+    return this.httpClient.get<ProviderModel>(`${this.baseURL}/userName/${userName}`);
   }
 
 
