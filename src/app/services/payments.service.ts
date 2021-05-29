@@ -16,4 +16,10 @@ export class PaymentsService {
   getPaymentsList() : Observable<PaymentEntity[]>{
     return this.http.get<PaymentEntity[]>(`${this.baseURL}`);
   }
+
+  deletePayment(id : number):Observable<Object>
+  {
+    return this.http.delete(`${this.baseURL}/${id}`);
+
+  }
 }
