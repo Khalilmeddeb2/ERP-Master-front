@@ -9,7 +9,7 @@ import { PaymentsService } from 'app/services/payments.service';
 })
 export class PaymentsComponent implements OnInit {
   payments:PaymentEntity[];
-  displayedColumns: string[] = ["mode","datePayment","montant","invoice","actions"];
+  displayedColumns: string[] = ["invoice","mode","datePayment","montant","actions"];
 
   constructor(private paymentService :PaymentsService) { }
 
