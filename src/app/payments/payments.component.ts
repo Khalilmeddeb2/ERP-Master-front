@@ -31,7 +31,8 @@ export class PaymentsComponent implements OnInit {
     {
       console.log("550")
       this.paymentService.deletePayment(id).subscribe( data => {
-        console.log("550")
+        console.log(data);
+        console.log("YA HOUUUUUMA")
         this.getPayments();
       })
     }
