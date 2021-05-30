@@ -29,7 +29,9 @@ export class PaymentsComponent implements OnInit {
 
   deletePayment(id : number)
     {
+      console.log(id)
       console.log("550")
+      console.log(id)
       this.paymentService.deletePayment(id).subscribe( data => {
         console.log(data);
         console.log("YA HOUUUUUMA")
