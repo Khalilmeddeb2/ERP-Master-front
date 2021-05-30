@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { PaymentEntity } from 'app/models/payment-entity';
 import { Observable } from 'rxjs';
@@ -20,6 +20,13 @@ export class PaymentsService {
   deletePayment(id : number):Observable<Object>
   {
     return this.http.delete(`${this.baseURL}/${id}`);
+
+  }
+  
+  addPayment(data :PaymentEntity,id : number): Observable<PaymentEntity>{
+    const headers = new HttpHeaders({ "Content-Type": "application/json" });
+    return this.http.post<PaymentEntity>(`${this.baseURL}`+'/'+id,data, { headers: headers });
+
 
   }
 }
