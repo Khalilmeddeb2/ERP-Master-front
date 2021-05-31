@@ -52,6 +52,11 @@ export class ProviderService {
     return this.httpClient.put(`${this.baseURL}/${id}`, provider);
   }
 
+  getTotalProviders()
+  {
+    return this.httpClient.get<ProviderModel>(`${this.baseURL}/TotalProvider`);
+  }
+
 
   /*public deleteProvider(providerId?: number) :Observable <ProviderModel> {
       
