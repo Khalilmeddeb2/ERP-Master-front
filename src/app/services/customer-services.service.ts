@@ -49,6 +49,11 @@ export class CustomerServicesService implements OnInit {
     return this.http.delete(`${this._customerListUrl}/${id}`);
 
   }
+  getTotalCustomers()
+  {
+    return this.http.get<CustomerEntity>(`${this._customerListUrl}/NumberCustomers`);
+  }
+  
   ngOnInit(): void {
       throw new Error('Method not implemented.');
     }
