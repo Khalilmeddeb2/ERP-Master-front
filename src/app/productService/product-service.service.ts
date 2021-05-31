@@ -79,4 +79,9 @@ private _productListUrl="http://localhost:9000/api/products"
     
       }
 
+  getTotalProducts()
+  {
+    return this.http.get<ProductEntity>(`${this._productListUrl}/TotalProducts`);
+  }
+
 }
