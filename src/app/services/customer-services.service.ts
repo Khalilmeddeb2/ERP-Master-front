@@ -53,6 +53,12 @@ export class CustomerServicesService implements OnInit {
   {
     return this.http.get<CustomerEntity>(`${this._customerListUrl}/NumberCustomers`);
   }
+
+  getCustomerFidele()
+  {
+    return this.http.get<CustomerEntity>(`${this._customerListUrl}/plusFidele`);
+  }
+
   
   ngOnInit(): void {
       throw new Error('Method not implemented.');
