@@ -15,6 +15,9 @@ export class DashboardComponent implements OnInit {
   nbreInvoices;
   nbreProducts;
   nbreProviders;
+  fidele;
+  lePlusAchete;
+  providerFidele;
 
   constructor(private customerServicesService : CustomerServicesService, private invoiceService :InvoiceServiceService ,private productService :ProductServiceService, private providerService :ProviderService) { }
   ngOnInit(): void {
@@ -22,6 +25,9 @@ export class DashboardComponent implements OnInit {
     this.totalInvoice();
     this.totalproducts();
     this.totalproviders();
+    this.customerPlusFidele();
+    this.productLePlusFidele();
+    this.ProviderLePlusFidele();
   }
 
   totalCustomer(){
@@ -85,5 +91,58 @@ totalproducts(){
   )
 
 }
+
+customerPlusFidele(){
+  console.log("suzana")
+  this.customerServicesService.getCustomerFidele().subscribe(data =>{
+    console.log("ppppp")
+    console.log(data);
+    this.fidele=data;
+    console.log("opopop")
+    console.log(this.fidele);
+
+
+}
+  )
+
+}
+
+productLePlusFidele()
+{
+  this.productService.getProductLePlusAchete().subscribe(data =>{
+    console.log("zak")
+    console.log(data);
+    this.lePlusAchete=data;
+    console.log("zikou")
+    console.log(this.lePlusAchete);
+
+
+}
+  )
+
+
+
+}
+
+ProviderLePlusFidele(){
+
+  this.providerService.getProviderLePlusFidele().subscribe(data =>{
+    console.log("zak")
+    console.log(data);
+    this.providerFidele=data;
+    console.log("zikou")
+    console.log(this.providerFidele);
+
+
+}
+  )
+
+}
+
+
+
+
+
+
 
 }
