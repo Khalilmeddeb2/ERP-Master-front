@@ -61,7 +61,7 @@
                   <div  class="btn-group-sm align-content-sm-center">
                 
                     <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Details" (click)="deleteOrderSale(element.number)"><i class="fa fa-trash" style="color:#ffffff"></i></button>
-                    <button  class="btn btn-dark " data-toggle="tooltip" data-placement="top"><a style="color:#ffffff" routerLink="/linesSales" routerLinkActive= "active"><i class="fa fa-eye"></i> </a></button>
+                    <button  class="btn btn-dark " data-toggle="tooltip" data-placement="top" (click)="redirecttoline(element.number)"><i class="fa fa-eye" style="color:#ffffff"></i></button>
 
                 </div>
               </ng-container>

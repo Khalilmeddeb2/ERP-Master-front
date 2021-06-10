@@ -39,7 +39,7 @@ const routes: Routes =[
 
   { path: 'addPayment', component: AddPaymentComponent},
 
-  { path: 'linesSales', component: LineSaleComponent}
+  { path: 'linesSales/:number', component: LineSaleComponent}
  
 ];
 

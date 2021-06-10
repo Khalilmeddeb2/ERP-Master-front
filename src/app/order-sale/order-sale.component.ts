@@ -1,5 +1,6 @@
 import { ɵBrowserPlatformLocation } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OrderSaleEntity } from 'app/models/order-sale-entity';
 import { OrderSaleServiceService } from 'app/services/order-sale-service.service';
 import { Observable } from 'rxjs';
@@ -19,7 +20,7 @@ export class OrderSaleComponent implements OnInit {
 
  
 
-  constructor(private orderSaleService :OrderSaleServiceService) { }
+  constructor(private orderSaleService :OrderSaleServiceService,private router:Router) { }
 
   ngOnInit(): void {
     this.getOrderSales();
@@ -45,5 +46,7 @@ export class OrderSaleComponent implements OnInit {
     })
   }
   
-
+redirecttoline(number){
+  this.router.navigate(['/linesSales/', number]);
+}
 }

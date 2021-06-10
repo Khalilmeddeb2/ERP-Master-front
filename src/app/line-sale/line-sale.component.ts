@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LineSaleEntity } from 'app/models/line-sale-entity';
+import { OrderSaleEntity } from 'app/models/order-sale-entity';
+import { LineSaleService } from 'app/services/line-sale.service';
 import { OrderSaleServiceService } from 'app/services/order-sale-service.service';
 
 @Component({
@@ -9,19 +12,24 @@ import { OrderSaleServiceService } from 'app/services/order-sale-service.service
 })
 export class LineSaleComponent implements OnInit {
   lineSales : LineSaleEntity[];
-  id : number=3;
+  orderSales :OrderSaleEntity[];
+  id : number;
   displayedColumns: string[] = ['Qt','description', 'orderSale','product','actions'];
 
-  constructor(private orderSaleService :OrderSaleServiceService) { }
+  constructor(private orderSaleService :OrderSaleServiceService, private lineSaleService :LineSaleService,private router: Router,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getLinesSales(this.id);
+    this.activatedRoute.params.subscribe(e=>{
+      this.id=e['number'];
+      this.getLinesSales(e['number'])
+    })
+    //this.getLinesSales(this.id);
   }
 
   getLinesSales(id)
   {
     console.log("dada");
-    console.log(this.id)
+    //console.log(this.id)
     this.orderSaleService.getLinesSalesForOrderSale(id).subscribe(e=>{
 
     this.lineSales=e;
@@ -35,5 +43,20 @@ export class LineSaleComponent implements OnInit {
 
     )
   }
+
+  deleteOrdersaleNonValid()
+  {
+    console.log("germany")
+    this.orderSaleService.deleteOrderSale(this.id).subscribe( data => {
+      console.log(data)
+      console.log("550")
+      this.router.navigate(['/Order-Sale']);
+    
+    })
+  }
+  
+  
+
+ 
 
 }

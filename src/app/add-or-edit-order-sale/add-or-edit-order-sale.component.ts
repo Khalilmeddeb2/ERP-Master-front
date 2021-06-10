@@ -40,9 +40,9 @@ export class AddOrEditOrderSaleComponent implements OnInit {
 
   saveProvider()
   {
-    console.log("aqwxcv")
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     this.ordersaleService.addOrderSalesList(this.orderSale, this.filtredCustomer.id).subscribe( data =>{
-      console.log("aqwxcv")
+      console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
       console.log(data);
       this.goToList();
      
@@ -59,7 +59,7 @@ export class AddOrEditOrderSaleComponent implements OnInit {
 
 
   onSubmit(){
-  console.log("************");
+  console.log("eeekkekkekekekekekekkeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
   
     console.log(this.invoiceNumber);
     console.log(this.orderSale);
