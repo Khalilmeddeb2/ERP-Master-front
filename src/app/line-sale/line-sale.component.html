@@ -3,9 +3,8 @@
         <section class="content">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">List Of SalesOrders</h3>
+                  <h3 class="card-title">List Of linesSales</h3>
 
-                  <button  class="btn btn-success btn-sm " data-toggle="tooltip" data-placement="top"  style="float: right;" ><a style="color:#ffffff" routerLink="/addOrEditOrderSale" routerLinkActive= "active"><i class="fa fa-plus-circle"></i> Add new SaleOrder</a></button>
 
                    
        
@@ -15,7 +14,7 @@
         <br>
         <br>
         
-        <table mat-table [dataSource]="orderSales" class="table table-hover" >
+        <table mat-table [dataSource]="lineSales" class="table table-hover" >
        
 
             <!--- Note that these columns can be defined in any order.
@@ -23,36 +22,27 @@
           
             <!-- Position Column -->
 
-            <ng-container matColumnDef="number">
-              <th mat-header-cell *matHeaderCellDef> Number </th>
-              <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+            <ng-container matColumnDef="Qt">
+              <th mat-header-cell *matHeaderCellDef> Qauntite </th>
+              <td mat-cell *matCellDef="let element"> {{element.qt}} </td>
             </ng-container>
 
-            <ng-container matColumnDef="date">
-              <th mat-header-cell *matHeaderCellDef> Date </th>
-              <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef> description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
             </ng-container>
 
-            <ng-container matColumnDef="totalPrice">
-                <th mat-header-cell *matHeaderCellDef> Total Price </th>
-                <td mat-cell *matCellDef="let element"> {{element.totalPrice}} </td>
+            <ng-container matColumnDef="orderSale">
+                <th mat-header-cell *matHeaderCellDef> OrderSale </th>
+                <td mat-cell *matCellDef="let element"> {{element.orderSale.number}} </td>
               </ng-container>
 
-              <ng-container matColumnDef="customer">
-                <th mat-header-cell *matHeaderCellDef> Customer </th>
-                <td mat-cell *matCellDef="let element"> {{element.customer.username}} </td>
+              <ng-container matColumnDef="product">
+                <th mat-header-cell *matHeaderCellDef> Product </th>
+                <td mat-cell *matCellDef="let element"> {{element.product.name}} </td>
               </ng-container>
 
-              <ng-container matColumnDef="invoice">
-                <th mat-header-cell *matHeaderCellDef> InvoiceNumber </th>
-                <td mat-cell *matCellDef="let element"> {{element.invoice.number}} </td>
-              </ng-container>
-
-              <ng-container matColumnDef="valid">
-                <th mat-header-cell *matHeaderCellDef> Valid </th>
-                <td mat-cell *matCellDef="let element"> {{element.valid}} </td>
-              </ng-container>
-
+             
               
               <ng-container matColumnDef="actions">
                 <th mat-header-cell *matHeaderCellDef> Actions </th>
@@ -74,6 +64,25 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
+
+          
+          <br>
+          <br>
+
+          <div>
+            <button class="btn btn-dark"  style="float: right" (click)="go()">Cancel</button>
+        </div>
+          
+          <div>
+              
+           
+            <button *ngIf="!isUpdate" class="btn btn-info" type="submit" style="float: right" (click)="saveProduct()">Validate</button>
+          </div>
+
+
+
+            
+         
           
          
          

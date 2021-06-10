@@ -12,6 +12,7 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 import { AddOrEditOrderSaleComponent } from './add-or-edit-order-sale/add-or-edit-order-sale.component';
 import { CreatePurchaseOrderComponent } from './create-purchase-order/create-purchase-order.component';
 import { AddPaymentComponent } from './add-payment/add-payment.component';
+import { LineSaleComponent } from './line-sale/line-sale.component';
 
 const routes: Routes =[
   {path:'create-customer',component:CreateCustomerComponent},
@@ -36,7 +37,9 @@ const routes: Routes =[
 
   {path: 'createPurchaseOrder', component: CreatePurchaseOrderComponent},
 
-  { path: 'addPayment', component: AddPaymentComponent}
+  { path: 'addPayment', component: AddPaymentComponent},
+
+  { path: 'linesSales', component: LineSaleComponent}
  
 ];
 

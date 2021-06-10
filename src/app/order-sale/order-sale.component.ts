@@ -1,3 +1,4 @@
+import { ɵBrowserPlatformLocation } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { OrderSaleEntity } from 'app/models/order-sale-entity';
 import { OrderSaleServiceService } from 'app/services/order-sale-service.service';
@@ -11,7 +12,9 @@ import { Observable } from 'rxjs';
 export class OrderSaleComponent implements OnInit {
 
   orderSales : OrderSaleEntity [] ;
-  displayedColumns: string[] = ['number','date', 'totalPrice','customer','invoice','actions'];
+  displayedColumns: string[] = ['number','date', 'totalPrice','customer','invoice','valid','actions'];
+  showBtnDetails: boolean;
+  showBtnDelete: boolean;
   
 
  
@@ -24,6 +27,7 @@ export class OrderSaleComponent implements OnInit {
   }
   private getOrderSales()
   {
+    console.log("salut");
    this.orderSaleService.getOrderSalesList().subscribe(e =>{
     this.orderSales=e
     console.log("yamamamamamamamamamama")

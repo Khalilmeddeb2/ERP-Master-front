@@ -7,6 +7,7 @@ export class OrderSaleEntity {
     totalPrice? :number;
     customer ?: CustomerEntity;
     invoice : InvoiceEntity;
+    valid? :boolean;
 
     
 }
