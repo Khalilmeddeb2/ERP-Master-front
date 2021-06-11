@@ -15,6 +15,8 @@ export class LineSaleComponent implements OnInit {
   orderSales :OrderSaleEntity[];
   id : number;
   displayedColumns: string[] = ['Qt','description', 'orderSale','product','actions'];
+  btndetails:boolean=true;
+  btndelete:boolean=true;
 
   constructor(private orderSaleService :OrderSaleServiceService, private lineSaleService :LineSaleService,private router: Router,private activatedRoute: ActivatedRoute) { }
 
@@ -53,6 +55,20 @@ export class LineSaleComponent implements OnInit {
       this.router.navigate(['/Order-Sale']);
     
     })
+  }
+
+  getValidOrderSale(){
+    this.orderSaleService.getValidOrdersale(this.id).subscribe( data => {
+      console.log(data)
+      console.log("7895")
+      this.btndetails=false;
+    this.btndelete=false;
+      this.router.navigate(['/Order-Sale']);
+     
+    
+    })
+    
+
   }
   
   

@@ -33,4 +33,12 @@ export class OrderSaleServiceService {
     return this.http.get<LineSaleEntity[]>(`${this.baseURL}/linesSales/${id}`);
 
   }
+
+  getValidOrdersale(id : number):Observable<Object>
+  {
+    return this.http.get(`${this.baseURL}/validOrderSale/${id}`);
+
+  }
+
+
 }

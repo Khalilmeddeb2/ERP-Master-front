@@ -14,8 +14,8 @@ export class OrderSaleComponent implements OnInit {
 
   orderSales : OrderSaleEntity [] ;
   displayedColumns: string[] = ['number','date', 'totalPrice','customer','invoice','valid','actions'];
-  showBtnDetails: boolean;
-  showBtnDelete: boolean;
+  btndetails:boolean=true;
+  btndelete:boolean=true;
   
 
  

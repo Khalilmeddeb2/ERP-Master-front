@@ -20,4 +20,9 @@ export class InvoiceServiceService {
   {
     return this.http.get<InvoiceEntity>(`${this.basetUrl}/TotalInvoice`);
   }
+
+  getInvoices():Observable<any>
+  {
+    return this.http.get<InvoiceEntity[]>(`${this.basetUrl}`);
+  }
 }
