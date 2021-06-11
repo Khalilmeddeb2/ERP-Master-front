@@ -41,5 +41,8 @@ export class CreateProviderComponent implements OnInit {
     console.log(this.provideer);
     this.saveProvider();
   }
+  go(){
+    this.goToProviderList();
+  }
 
 }

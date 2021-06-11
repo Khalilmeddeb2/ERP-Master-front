@@ -23,6 +23,7 @@ import { CreateProviderComponent } from 'app/create-provider/create-provider.com
 import { UpdateProviderComponent } from 'app/update-provider/update-provider.component';
 import { AddPaymentComponent } from 'app/add-payment/add-payment.component';
 import { LineSaleComponent } from 'app/line-sale/line-sale.component';
+import { CreateCustomerComponent } from 'app/create-customer/create-customer.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -90,7 +91,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'update-provider/:id', component: UpdateProviderComponent},
     { path: 'addPayment', component: AddPaymentComponent},
     { path: 'linesSales/:number', component: LineSaleComponent},
-
+   
 
 
     

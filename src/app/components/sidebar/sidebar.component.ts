@@ -19,10 +19,11 @@ export const ROUTES: RouteInfo[] = [
     { path: '/Payments', title: 'Payments',  icon:'payments', class: 'active-pro' },
     { path: '/addOrEditOrderSale', title: 'Add Order Sale',  icon:'', class: '' },
     { path: '/createPurchaseOrder', title: 'Add Purchase Order',  icon:'', class: ''},
-    { path: '/create-provider', title: 'Add Provider',  icon:'', class: '' },
-    { path: '/update-provider/:id', title: 'Update Provider',  icon:'', class: ''},
+    { path: '/create-provider', title: ' Provider',  icon:'', class: '' },
+    { path: '/update-provider/:id', title: ' Provider',  icon:'', class: ''},
     { path: '/addPayment',  title: 'Add Payment',  icon:'', class: ''},
    { path: '/linesSales/:number',  title: 'LinesSales',  icon:'', class: ''},
+  
 ];
 
 @Component({
