@@ -50,8 +50,7 @@
 
                   <div  class="btn-group-sm align-content-sm-center">
                 
-                    <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Details" (click)="deleteOrderSale(element.number)"><i class="fa fa-trash" style="color:#ffffff"></i></button>
-                    <button  class="btn btn-dark " data-toggle="tooltip" data-placement="top"><a style="color:#ffffff" routerLink="/linesSales" routerLinkActive= "active"><i class="fa fa-eye"></i> </a></button>
+                    <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" (click)="deleteLineSale(element.id)"><i class="fa fa-trash" style="color:#ffffff"></i></button>
 
                 </div>
               </ng-container>
@@ -70,13 +69,13 @@
           <br>
 
           <div>
-            <button class="btn btn-dark"  style="float: right" (click)="deleteOrdersaleNonValid()"><a style="color:#ffffff" routerLink="/Order-Sale" routerLinkActive= "active">Cancel</a></button>
+            <button [disabled]="actionDisabled" class="btn btn-dark"  style="float: right" (click)="deleteOrdersaleNonValid()">Cancel</button>
         </div>
           
           <div>
               
            
-            <button *ngIf="!isUpdate" class="btn btn-info" type="submit" style="float: right" (click)="getValidOrderSale()">Validate</button>
+            <button [disabled]="actionDisabled" class="btn btn-info" type="submit" style="float: right" (click)="getValidOrderSale()">Validate</button>
           </div>
 
 

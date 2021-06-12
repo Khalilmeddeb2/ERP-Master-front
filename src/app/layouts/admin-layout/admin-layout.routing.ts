@@ -91,7 +91,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'update-provider/:id', component: UpdateProviderComponent},
     { path: 'addPayment', component: AddPaymentComponent},
     { path: 'linesSales/:number', component: LineSaleComponent},
+  
+
    
+    
 
 
     

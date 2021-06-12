@@ -22,8 +22,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/create-provider', title: ' Provider',  icon:'', class: '' },
     { path: '/update-provider/:id', title: ' Provider',  icon:'', class: ''},
     { path: '/addPayment',  title: 'Add Payment',  icon:'', class: ''},
-   { path: '/linesSales/:number',  title: 'LinesSales',  icon:'', class: ''},
-  
+    { path: '/linesSales/:number',  title: 'LinesSales',  icon:'', class: ''},
+    
+   
 ];
 
 @Component({
