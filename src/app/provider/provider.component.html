@@ -1,14 +1,10 @@
 <div class="main-content">
-    <div class="container-fluid">
-            
-
-
-
-
-        <div class="panel panel-primary">
-            <div class="panel-heading">
+  <div class="container-fluid">
+      <section class="content">
+          <div class="card">
+              <div class="card-header">
               <h2>Providers List</h2>
-            </div>
+            
 
 
 
@@ -16,8 +12,12 @@
 
 
             
-                <a routerLink="/create-provider" routerLinkActive= "active" class="btn btn-success stretched-link">Add provider</a>
-            
+                <a routerLink="/create-provider" routerLinkActive= "active" class="btn btn-success stretched-link" data-toggle="tooltip" data-placement="top"  style="float: right;"><i class="fa fa-plus-circle"></i>
+                 
+              Add new provider</a>
+            <br>
+            <br>
+            <br>
 
 
 
@@ -39,7 +39,7 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let provider of provideers">
-                    <td>{{provider.userName}}</td>
+                    <td>{{provider.username}}</td>
                     <td>{{provider.firstName}}</td>
                     <td>{{provider.lastName}}</td>
                     <td>{{provider.email}}</td>
@@ -62,12 +62,17 @@
                 </tbody>
               </table>
             </div>
+
+
+
+            
           </div>
-
-
-
-
+        </div>
+        </section>
+        
+        
+                 
+              
+            </div>
+        </div>
          
-      
-    </div>
-</div>

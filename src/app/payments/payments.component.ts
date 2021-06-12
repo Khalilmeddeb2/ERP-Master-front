@@ -9,7 +9,7 @@ import { PaymentsService } from 'app/services/payments.service';
 })
 export class PaymentsComponent implements OnInit {
   payments:PaymentEntity[];
-  displayedColumns: string[] = ["mode","datePayment","montant","invoice"];
+  displayedColumns: string[] = ["invoice","mode","datePayment","montant","actions"];
 
   constructor(private paymentService :PaymentsService) { }
 
@@ -25,4 +25,18 @@ export class PaymentsComponent implements OnInit {
       console.log(e)
     })
   }
+
+
+  deletePayment(id : number)
+    {
+      console.log(id)
+      console.log("550")
+      console.log(id)
+      this.paymentService.deletePayment(id).subscribe( data => {
+        console.log(data);
+        console.log("YA HOUUUUUMA")
+        this.getPayments();
+      })
+    }
+  
 }

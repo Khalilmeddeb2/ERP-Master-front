@@ -1,22 +1,25 @@
 <div class="main-content">
     <div class="container-fluid">
-
-
-<div class="panel panel-primary">
-    <div class="panel-heading">
+        <section class="content">
+            <div class="card">
+                <div class="card-header">
         
         <h2>List of Customers</h2>
 
 
-        <button routerLink="/create-customer" class="btn btn-success" routerLinkActive="active" title="Add New customer">
-            Add new customer 
+        <button routerLink="/create-customer" class="btn btn-success" data-toggle="tooltip" data-placement="top"  style="float: right;" routerLinkActive="active" title="Add New customer"><i class="fa fa-plus-circle"></i>
+            Add new Customer
         </button>
+        <br>
+        <br>
+        <br>
 
 
         <div class="panel-body">
             <table id="tableCustomer" class="table table-striped"  cellspacing="0" width="100%">
                 <thead>
                 <tr>
+                    <th>Username</th>
                     <th>FirstName</th>
                     <th>LastName</th>
                     <th>Email</th>
@@ -27,6 +30,7 @@
                     </tr>
                     </thead>
                     <tr *ngFor="let i of customers">
+                        <td>{{i.username}} </td>
                         <td>{{i.firstName}} </td>
                         <td>{{i.lastName}} </td>
                         <td>{{i.email}} </td>
@@ -52,8 +56,12 @@
 
          
       
-    </div>
-</div>
-
-</div>
-</div>
+                </div>
+            </div>
+            </section>
+            
+            
+                     
+                  
+                </div>
+            </div>

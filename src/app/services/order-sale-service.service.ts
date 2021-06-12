@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LineSaleEntity } from 'app/models/line-sale-entity';
 import { OrderSaleEntity } from 'app/models/order-sale-entity';
 import { Observable } from 'rxjs';
 
@@ -27,4 +28,17 @@ export class OrderSaleServiceService {
     return this.http.delete(`${this.baseURL}/${id}`);
 
   }
+
+  getLinesSalesForOrderSale(id : number ): Observable<LineSaleEntity[]>{
+    return this.http.get<LineSaleEntity[]>(`${this.baseURL}/linesSales/${id}`);
+
+  }
+
+  getValidOrdersale(id : number):Observable<Object>
+  {
+    return this.http.get(`${this.baseURL}/validOrderSale/${id}`);
+
+  }
+
+
 }

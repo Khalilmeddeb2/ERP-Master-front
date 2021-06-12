@@ -21,6 +21,9 @@ import { AddOrEditOrderSaleComponent } from 'app/add-or-edit-order-sale/add-or-e
 import { CreatePurchaseOrderComponent } from 'app/create-purchase-order/create-purchase-order.component';
 import { CreateProviderComponent } from 'app/create-provider/create-provider.component';
 import { UpdateProviderComponent } from 'app/update-provider/update-provider.component';
+import { AddPaymentComponent } from 'app/add-payment/add-payment.component';
+import { LineSaleComponent } from 'app/line-sale/line-sale.component';
+import { CreateCustomerComponent } from 'app/create-customer/create-customer.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -86,6 +89,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'createPurchaseOrder', component: CreatePurchaseOrderComponent },
     { path: 'create-provider', component: CreateProviderComponent},
     { path: 'update-provider/:id', component: UpdateProviderComponent},
+    { path: 'addPayment', component: AddPaymentComponent},
+    { path: 'linesSales/:number', component: LineSaleComponent},
+   
 
 
     

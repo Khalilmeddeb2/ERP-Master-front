@@ -1,4 +1,6 @@
+import { ɵBrowserPlatformLocation } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OrderSaleEntity } from 'app/models/order-sale-entity';
 import { OrderSaleServiceService } from 'app/services/order-sale-service.service';
 import { Observable } from 'rxjs';
@@ -11,12 +13,14 @@ import { Observable } from 'rxjs';
 export class OrderSaleComponent implements OnInit {
 
   orderSales : OrderSaleEntity [] ;
-  displayedColumns: string[] = ['number','date', 'totalPrice','customer','invoice','actions'];
+  displayedColumns: string[] = ['number','date', 'totalPrice','customer','invoice','valid','actions'];
+  btndetails:boolean=true;
+  btndelete:boolean=true;
   
 
  
 
-  constructor(private orderSaleService :OrderSaleServiceService) { }
+  constructor(private orderSaleService :OrderSaleServiceService,private router:Router) { }
 
   ngOnInit(): void {
     this.getOrderSales();
@@ -24,6 +28,7 @@ export class OrderSaleComponent implements OnInit {
   }
   private getOrderSales()
   {
+    console.log("salut");
    this.orderSaleService.getOrderSalesList().subscribe(e =>{
     this.orderSales=e
     console.log("yamamamamamamamamamama")
@@ -41,5 +46,7 @@ export class OrderSaleComponent implements OnInit {
     })
   }
   
-
+redirecttoline(number){
+  this.router.navigate(['/linesSales/', number]);
+}
 }

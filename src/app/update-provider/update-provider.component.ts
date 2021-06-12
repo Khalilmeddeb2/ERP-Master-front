@@ -40,4 +40,8 @@ export class UpdateProviderComponent implements OnInit {
     }, error => console.log(error));
   }
 
+  go(){
+    this.goToProviderList();
+  }
+
 }
