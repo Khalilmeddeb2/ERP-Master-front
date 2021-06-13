@@ -86,6 +86,10 @@ export class LineSaleComponent implements OnInit {
     this.getLinesSales(this.id);
   })
   }
+
+  redirecttoline(){
+    this.router.navigate(['/addLineSale',this.id]);
+  }
   
 
  

@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LineSaleEntity } from 'app/models/line-sale-entity';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -20,6 +21,13 @@ export class LineSaleService {
   {
     return this.http.delete(`${this.basetUrl}/${id}`);
 
+  }
+
+
+  addLineSale(data:LineSaleEntity, id1:number,id2:number) : Observable<LineSaleEntity>{
+
+    const headers = new HttpHeaders({ "Content-Type": "application/json" });
+    return this.http.post<LineSaleEntity>(`${this.basetUrl}`+'/'+id1+'/'+id2,data, { headers: headers });
   }
 
 }

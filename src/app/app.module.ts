@@ -51,9 +51,14 @@ import { CreatePurchaseOrderComponent } from './create-purchase-order/create-pur
 import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { LineSaleComponent } from './line-sale/line-sale.component';
 import { LinesBuysComponent } from './lines-buys/lines-buys.component';
+<<<<<<< HEAD
 import { SecurityService } from './security/security.service';
 import { LoginComponent } from './security/login/login.component';
 
+=======
+import { AddLineSaleComponent } from './add-line-sale/add-line-sale.component';
+import { AddLineBuyComponent } from './add-line-buy/add-line-buy.component';
+>>>>>>> 424f1b9596ce095f8a61a78adeeb1899f58f3ebb
 
 
 @NgModule({
@@ -105,8 +110,13 @@ import { LoginComponent } from './security/login/login.component';
     AddPaymentComponent,
     LineSaleComponent,
     LinesBuysComponent,
+<<<<<<< HEAD
     // SecurityService,
     LoginComponent,
+=======
+    AddLineSaleComponent,
+    AddLineBuyComponent
+>>>>>>> 424f1b9596ce095f8a61a78adeeb1899f58f3ebb
   
     
 
