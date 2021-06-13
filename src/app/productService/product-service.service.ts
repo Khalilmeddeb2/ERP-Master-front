@@ -16,6 +16,9 @@ const headers= new HttpHeaders()
 })
 
 export class ProductServiceService  implements OnInit {
+  getProductByName(subname: any) {
+    throw new Error('Method not implemented.');
+  }
   
 product :any []=[];
 private _productListUrl="http://localhost:9000/api/products" 
@@ -89,4 +92,7 @@ private _productListUrl="http://localhost:9000/api/products"
     return this.http.get<ProductEntity>(`${this._productListUrl}/LeplusAchete`);
   }
 
+  getProductByUserName(subname :string)
+  {
+    return this.http.get<ProductEntity>(`${this._productListUrl}/name/${subname}`);  }
 }

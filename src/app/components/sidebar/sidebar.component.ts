@@ -24,7 +24,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/addPayment',  title: 'Add Payment',  icon:'', class: ''},
     { path: '/linesSales/:number',  title: 'LinesSales',  icon:'', class: ''},
     { path: '/linesBuys/:number',  title: 'LinesBuys',  icon:'', class: ''},
-    
+    { path: '/addLineSale',title: 'addLineSale',  icon:'', class: '' }
    
 ];
 
