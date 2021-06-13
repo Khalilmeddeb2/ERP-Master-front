@@ -2,6 +2,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
+import { AppUserAuth } from 'app/security/app-user-auth';
+import { SecurityService } from 'app/security/security.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,12 +16,18 @@ export class NavbarComponent implements OnInit {
       mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
+    
+  securityObject : AppUserAuth = null;
 
-    constructor(location: Location,  private element: ElementRef, private router: Router) {
+    constructor(location: Location,  private element: ElementRef, private router: Router, private securityService: SecurityService) {
       this.location = location;
           this.sidebarVisible = false;
+          this.securityObject = securityService.securityObject;
     }
-
+    logout():void{
+        this.securityService.logout();
+        this.router.navigate(['/login'])
+    }
     ngOnInit(){
       this.listTitles = ROUTES.filter(listTitle => listTitle);
       const navbar: HTMLElement = this.element.nativeElement;

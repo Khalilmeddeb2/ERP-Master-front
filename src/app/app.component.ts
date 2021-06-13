@@ -1,4 +1,6 @@
 import { Component} from '@angular/core';
+import { AppUserAuth } from './security/app-user-auth';
+import { SecurityService } from './security/security.service';
 
 
 @Component({
@@ -7,5 +9,12 @@ import { Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  securityObject: AppUserAuth = null;
+  constructor(private securityService: SecurityService) {
+    this.securityObject = securityService.securityObject;
+  }
 
+  logout(): void {
+    this.securityService.logout();
+}
 }

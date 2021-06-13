@@ -25,6 +25,7 @@ import { AddPaymentComponent } from 'app/add-payment/add-payment.component';
 import { LineSaleComponent } from 'app/line-sale/line-sale.component';
 import { CreateCustomerComponent } from 'app/create-customer/create-customer.component';
 import { LinesBuysComponent } from 'app/lines-buys/lines-buys.component';
+import { LoginComponent } from 'app/security/login/login.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -93,6 +94,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'addPayment', component: AddPaymentComponent},
     { path: 'linesSales/:number', component: LineSaleComponent},
     { path: 'linesBuys/:number', component: LinesBuysComponent},
+    { path: 'login', component: LoginComponent},
+
   
 
    

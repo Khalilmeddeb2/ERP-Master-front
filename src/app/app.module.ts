@@ -51,6 +51,9 @@ import { CreatePurchaseOrderComponent } from './create-purchase-order/create-pur
 import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { LineSaleComponent } from './line-sale/line-sale.component';
 import { LinesBuysComponent } from './lines-buys/lines-buys.component';
+import { SecurityService } from './security/security.service';
+import { LoginComponent } from './security/login/login.component';
+
 
 
 @NgModule({
@@ -101,12 +104,14 @@ import { LinesBuysComponent } from './lines-buys/lines-buys.component';
     CreatePurchaseOrderComponent,
     AddPaymentComponent,
     LineSaleComponent,
-    LinesBuysComponent
+    LinesBuysComponent,
+    // SecurityService,
+    LoginComponent,
   
     
 
   ],
-  providers: [ProviderService,CustomerServicesService],
+  providers: [ProviderService,CustomerServicesService,SecurityService],
   bootstrap: [AppComponent],
   
 })

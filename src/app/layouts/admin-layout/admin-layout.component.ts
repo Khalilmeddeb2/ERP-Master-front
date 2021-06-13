@@ -6,6 +6,8 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import PerfectScrollbar from 'perfect-scrollbar';
 import * as $ from "jquery";
+import { AppUserAuth } from 'app/security/app-user-auth';
+import { SecurityService } from 'app/security/security.service';
 
 @Component({
   selector: 'app-admin-layout',
@@ -16,8 +18,16 @@ export class AdminLayoutComponent implements OnInit {
   private _router: Subscription;
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
+  securityObject : AppUserAuth = null;
 
-  constructor( public location: Location, private router: Router) {}
+  constructor( public location: Location, private router: Router, private securityService: SecurityService) { 
+      this.securityObject = securityService.securityObject;
+     }
+
+    
+  logout():void{
+      this.securityService.logout();
+  }
 
   ngOnInit() {
       const isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;

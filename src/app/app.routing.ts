@@ -11,16 +11,20 @@ import { UpdateProviderComponent } from './update-provider/update-provider.compo
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { AddOrEditOrderSaleComponent } from './add-or-edit-order-sale/add-or-edit-order-sale.component';
 import { CreatePurchaseOrderComponent } from './create-purchase-order/create-purchase-order.component';
-import { AddPaymentComponent } from './add-payment/add-payment.component';
-import { LineSaleComponent } from './line-sale/line-sale.component';
-import { LinesBuysComponent } from './lines-buys/lines-buys.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './security/login/login.component';
+// import { LoginComponent } from './login/login.component';
 
 const routes: Routes =[
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {path:'create-customer',component:CreateCustomerComponent},
   {path:'update-customer/:id',component:UpdateCustomerComponent},
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
   }, 
   {
@@ -29,6 +33,13 @@ const routes: Routes =[
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]
   },
+  // {
+  //     path: 'login',
+  //     children: [ {
+  //       path: 'login',
+  //       component: LoginComponent
+  //   }]},
+  
   {path: 'create-provider', component: CreateProviderComponent},
   {path: 'update-provider/:id', component: UpdateProviderComponent},
 
@@ -36,14 +47,7 @@ const routes: Routes =[
  
   {path: 'addOrEditOrderSale', component: AddOrEditOrderSaleComponent},
 
-  {path: 'createPurchaseOrder', component: CreatePurchaseOrderComponent},
-
-  { path: 'addPayment', component: AddPaymentComponent},
-
-  { path: 'linesSales/:number', component: LineSaleComponent},
-  
-  { path: 'linesBuys/:number', component: LinesBuysComponent}
-  
+  {path: 'createPurchaseOrder', component: CreatePurchaseOrderComponent}
  
 ];
 
