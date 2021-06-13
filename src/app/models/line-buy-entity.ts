@@ -5,6 +5,6 @@ export class LineBuyEntity {
     id:number;
     qt:number;
     descriptio:string;
-    orderSale :PurchaseOrder;
+    purchaseOrder :PurchaseOrder;
     product :ProductEntity;
 }

@@ -65,18 +65,7 @@ export class AddPaymentComponent implements OnInit {
   onSubmit(){
   console.log("************");
   
-   /* console.log(this.invoiceNumber);
-    console.log(this.payment);
-    console.log(this.filtredInvoice);*/
-
-    
-    //this.payment.mode=this.modepayment;
-    //this.payment.montant=this.montantPayment;
-
-
-   
-    //console.log(this.orderSale.invoice.number);
-    //console.log(this.orderSale);
+  
     console.log(this.payment);
     this.save();
     //console.log(this.payment);
