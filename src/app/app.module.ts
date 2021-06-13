@@ -50,6 +50,7 @@ import { AddOrEditOrderSaleComponent } from './add-or-edit-order-sale/add-or-edi
 import { CreatePurchaseOrderComponent } from './create-purchase-order/create-purchase-order.component';
 import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { LineSaleComponent } from './line-sale/line-sale.component';
+import { LinesBuysComponent } from './lines-buys/lines-buys.component';
 
 
 @NgModule({
@@ -99,7 +100,8 @@ import { LineSaleComponent } from './line-sale/line-sale.component';
     AddOrEditOrderSaleComponent,
     CreatePurchaseOrderComponent,
     AddPaymentComponent,
-    LineSaleComponent
+    LineSaleComponent,
+    LinesBuysComponent
   
     
 

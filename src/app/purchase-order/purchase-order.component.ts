@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PurchaseOrder } from 'app/model/purchase-order';
 import { PurchaseOrderServiceService } from 'app/services/purchase-order-service.service';
 
@@ -10,9 +11,9 @@ import { PurchaseOrderServiceService } from 'app/services/purchase-order-service
 export class PurchaseOrderComponent implements OnInit {
 
   purchaseOrder : PurchaseOrder [] ;
-  displayedColumns: string[] = ['number','date', 'totalPrice','provider','invoice','actions'];
+  displayedColumns: string[] = ['number','date', 'totalPrice','provider','invoice','valid','actions'];
 
-  constructor(private purchaseOrderService : PurchaseOrderServiceService) { }
+  constructor(private purchaseOrderService : PurchaseOrderServiceService ,private router:Router) { }
 
   ngOnInit(): void {
     this.getPurchaseList();
@@ -32,6 +33,10 @@ export class PurchaseOrderComponent implements OnInit {
     this.purchaseOrderService.deletePurchaseOrder(number).subscribe( data => {
       this.getPurchaseList();
     })
+  }
+
+  redirecttoline(number){
+    this.router.navigate(['/linesBuys/', number]);
   }
 
 }

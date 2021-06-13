@@ -13,6 +13,7 @@ import { AddOrEditOrderSaleComponent } from './add-or-edit-order-sale/add-or-edi
 import { CreatePurchaseOrderComponent } from './create-purchase-order/create-purchase-order.component';
 import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { LineSaleComponent } from './line-sale/line-sale.component';
+import { LinesBuysComponent } from './lines-buys/lines-buys.component';
 
 const routes: Routes =[
   {path:'create-customer',component:CreateCustomerComponent},
@@ -39,7 +40,10 @@ const routes: Routes =[
 
   { path: 'addPayment', component: AddPaymentComponent},
 
-  { path: 'linesSales/:number', component: LineSaleComponent}
+  { path: 'linesSales/:number', component: LineSaleComponent},
+  
+  { path: 'linesBuys/:number', component: LinesBuysComponent}
+  
  
 ];
 

@@ -40,5 +40,11 @@ export class OrderSaleServiceService {
 
   }
 
+  getOrderSaleById(id :number):Observable<Object>
+  {
+    return this.http.get(`${this.baseURL}/${id}`);
+
+  }
+
 
 }

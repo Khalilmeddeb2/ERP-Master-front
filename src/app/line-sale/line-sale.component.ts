@@ -15,25 +15,31 @@ export class LineSaleComponent implements OnInit {
   orderSales :OrderSaleEntity[];
   id : number;
   displayedColumns: string[] = ['Qt','description', 'orderSale','product','actions'];
-  btndetails:boolean=true;
-  btndelete:boolean=true;
+  actionDisabled=false;
 
   constructor(private orderSaleService :OrderSaleServiceService, private lineSaleService :LineSaleService,private router: Router,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(e=>{
       this.id=e['number'];
+      this.orderSaleService.getOrderSaleById(this.id).subscribe((e : any) =>
+        {
+        this.actionDisabled=e.valid;
+       
+      })
       this.getLinesSales(e['number'])
     })
     //this.getLinesSales(this.id);
   }
+  
+
 
   getLinesSales(id)
   {
     console.log("dada");
     //console.log(this.id)
     this.orderSaleService.getLinesSalesForOrderSale(id).subscribe(e=>{
-
+    
     this.lineSales=e;
     console.log("dadou");
     console.log(e);
@@ -46,6 +52,20 @@ export class LineSaleComponent implements OnInit {
     )
   }
 
+  
+  getValidOrderSale(){
+    this.orderSaleService.getValidOrdersale(this.id).subscribe( data => {
+      console.log(data)
+      console.log("7895")
+      this.router.navigate(['/Order-Sale']);
+     
+    
+    })
+    
+
+  }
+  
+  
   deleteOrdersaleNonValid()
   {
     console.log("germany")
@@ -57,20 +77,15 @@ export class LineSaleComponent implements OnInit {
     })
   }
 
-  getValidOrderSale(){
-    this.orderSaleService.getValidOrdersale(this.id).subscribe( data => {
-      console.log(data)
-      console.log("7895")
-      this.btndetails=false;
-    this.btndelete=false;
-      this.router.navigate(['/Order-Sale']);
-     
-    
-    })
-    
 
+  deleteLineSale(id :number)
+  {
+   this.lineSaleService.deleteLineSale(id).subscribe( data => {
+    console.log(data)
+    console.log("550")
+    this.getLinesSales(this.id);
+  })
   }
-  
   
 
  
