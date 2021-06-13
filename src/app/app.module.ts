@@ -52,6 +52,7 @@ import { AddPaymentComponent } from './add-payment/add-payment.component';
 import { LineSaleComponent } from './line-sale/line-sale.component';
 import { LinesBuysComponent } from './lines-buys/lines-buys.component';
 import { AddLineSaleComponent } from './add-line-sale/add-line-sale.component';
+import { AddLineBuyComponent } from './add-line-buy/add-line-buy.component';
 
 
 @NgModule({
@@ -103,7 +104,8 @@ import { AddLineSaleComponent } from './add-line-sale/add-line-sale.component';
     AddPaymentComponent,
     LineSaleComponent,
     LinesBuysComponent,
-    AddLineSaleComponent
+    AddLineSaleComponent,
+    AddLineBuyComponent
   
     
 
