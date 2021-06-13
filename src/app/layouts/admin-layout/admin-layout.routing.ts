@@ -26,6 +26,8 @@ import { LineSaleComponent } from 'app/line-sale/line-sale.component';
 import { CreateCustomerComponent } from 'app/create-customer/create-customer.component';
 import { LinesBuysComponent } from 'app/lines-buys/lines-buys.component';
 import { AddLineSaleComponent } from 'app/add-line-sale/add-line-sale.component';
+import { AddLineBuyComponent } from 'app/add-line-buy/add-line-buy.component';
+import { UpdateCustomerComponent } from 'app/update-customer/update-customer.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -95,7 +97,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'linesSales/:number', component: LineSaleComponent},
     { path: 'linesBuys/:number', component: LinesBuysComponent},
     { path: 'addLineSale', component: AddLineSaleComponent},
-
+    { path: 'addLineSale/:number', component: AddLineSaleComponent},
+    { path: 'addLineBuy/:number', component: AddLineBuyComponent},
+    {path:'create-customer',component:CreateCustomerComponent},
+    {path:'update-customer/:id',component:UpdateCustomerComponent},
    
     
 

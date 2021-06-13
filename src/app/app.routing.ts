@@ -18,8 +18,7 @@ import { AddLineSaleComponent } from './add-line-sale/add-line-sale.component';
 import { AddLineBuyComponent } from './add-line-buy/add-line-buy.component';
 
 const routes: Routes =[
-  {path:'create-customer',component:CreateCustomerComponent},
-  {path:'update-customer/:id',component:UpdateCustomerComponent},
+  
   {
     path: '',
     redirectTo: 'dashboard',
@@ -48,7 +47,11 @@ const routes: Routes =[
 
   { path: 'addLineSale/:number', component: AddLineSaleComponent},
 
-  { path: 'addLineBuy/:number', component: AddLineBuyComponent}
+  { path: 'addLineBuy/:number', component: AddLineBuyComponent},
+
+  {path:'create-customer',component:CreateCustomerComponent},
+
+  {path:'update-customer/:id',component:UpdateCustomerComponent},
 
 
 

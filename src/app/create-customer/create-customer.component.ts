@@ -34,5 +34,9 @@ export class CreateCustomerComponent implements OnInit {
     console.log(this.customer);
     this.saveCustomer();
   }
+  go()
+  {
+    this.goToCustomersList();
+  }
 
 }
